@@ -1,0 +1,43 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.App {
+  background-color: black;
+  height: 100vh; /* viwer height - aplica no comprimento da tela*/
+  display: grid;
+  place-items: center;
+}
+
+.app__videos {
+  height: 100vh;
+  max-height: 700px;
+  width: 80%;
+  max-width: 400px; /*comando para que não ultrapasse o tamanho máximo da largura*/
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: scroll; /*quando esceder, coloca um scroll*/
+  scrollbar-width: none;
+  scroll-snap-type: y mandatory; /*comando para fazer o snap de um video para o outro*/
+  position: relative;
+}
+
+/* Esconde a scrollbar no chrome, safari e opera */
+
+.app__videos::-webkit-scrollbar {
+  display: none;
+}
+
+/* Esconde a scrollbar no internet explorer, edge e firefox */
+
+.app__videos {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media only screen and (max-width: 440px) {
+  .app__videos {
+    width: 100%;
+    height: 100vh;
+  }
+}

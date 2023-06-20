@@ -1,0 +1,12 @@
+.video {
+  height: 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  position: relative; /*para que os outros elementos que apareçam na frente dele tenham posição absoluta e se comportem soltos na tela*/
+}
+
+.video__player {
+  height: 100%; /*100% do container*/
+  width: 100%;
+  object-fit: fill; /*para preencher o container*/
+}
